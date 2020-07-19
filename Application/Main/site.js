@@ -1,6 +1,6 @@
 const timerStart = Date.now();
 const url = {
-  github: "https://github.com/YoungDaggerDee/ToDoApp",
+  github: "https://github.com/YoungDaggerDee/TaskManager",
   settings: "../../JSON/settings.json",
   package: "../../package.json",
   version_log: "../../JSON/version_log.json",
@@ -8,7 +8,7 @@ const url = {
     saved_tasks: "../../local_storage/saved_task.json",
   },
   github_package:
-    "https://raw.githubusercontent.com/YoungDaggerDee/ToDoApp/master/package.json",
+    "https://raw.githubusercontent.com/YoungDaggerDee/TaskManager/master/package.json",
 };
 let dev_mode = (direction = false);
 let tasks = [];
@@ -27,7 +27,7 @@ $.getJSON(url.package, (local_data) => {
 $.getJSON(url.github_package, (data) => {
   versions["local"] = versionInt(versions["local"]);
   versions["server"] = versionInt(data.version);
-  if (versions["server"] - versions["local"] >= 0) {
+  if (versions["server"] - versions["local"] > 0) {
     $("#updates-count").html(versions["server"] - versions["local"]);
     $("#updates-count").removeClass("d-none");
   } else {

@@ -1,47 +1,47 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.5.4",
-  "description": "A minimal Electron application",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron --enable-transparent-visuals .",
-    "build": "electron-packager . Build",
-    "update": "node updater.js",
-    "log": "node logs.js"
-  },
-  "build": {
-    "appId": "com.epenywis.quickstart",
-    "productName": "Task manager"
-  },
-  "log-message": "Wow you just open console, I would like to find someone so we can work together on this app. Send me email ( dannyseiner@gmail.com ) :P",
-  "mode": "production",
-  "repository": "https://github.com/YoungDaggerDee/ToDoApp",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "download_links": {
-    "google-disk": "https://drive.google.com/file/d/1klbXaKbXTVQobh76SCjM_wgwySiDy5ao/view?usp=sharing",
-    "github": "https://github.com/YoungDaggerDee/ToDoApp"
-  },
-  "author": "Daniel Seiner",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^9.1.0",
-    "electron-packager": "^14.2.1"
-  },
-  "dependencies": {
-    "electron-builder": "^22.7.0",
-    "electron-reload": "^1.5.0",
-    "mysql": "^2.18.1",
-    "nexe": "^3.3.2",
-    "opn": "^6.0.0",
-    "readline": "^1.3.0",
-    "reload": "^3.1.0",
-    "shelljs": "^0.8.4",
-    "simple-git": "^2.12.0"
-  }
+    "name": "electron-quick-start",
+    "version": "1.5.5",
+    "description": "A minimal Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron --enable-transparent-visuals .",
+        "build": "electron-packager . Build",
+        "update": "node updater.js",
+        "mode": "node mode.js"
+    },
+    "build": {
+        "appId": "com.epenywis.quickstart",
+        "productName": "Task manager"
+    },
+    "log-message": "Wow you just open console, I would like to find someone so we can work together on this app. Send me email ( dannyseiner@gmail.com ) :P",
+    "mode": "production",
+    "repository": "https://github.com/YoungDaggerDee/TaskManager",
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "download_links": {
+        "google-disk": "https://drive.google.com/file/d/1klbXaKbXTVQobh76SCjM_wgwySiDy5ao/view?usp=sharing",
+        "github": "https://github.com/YoungDaggerDee/ToDoApp"
+    },
+    "author": "Daniel Seiner",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^9.1.0",
+        "electron-packager": "^14.2.1"
+    },
+    "dependencies": {
+        "electron-builder": "^22.7.0",
+        "electron-reload": "^1.5.0",
+        "mysql": "^2.18.1",
+        "nexe": "^3.3.2",
+        "opn": "^6.0.0",
+        "readline": "^1.3.0",
+        "reload": "^3.1.0",
+        "shelljs": "^0.8.4",
+        "simple-git": "^2.12.0"
+    }
 }
