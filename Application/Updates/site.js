@@ -6,9 +6,9 @@ const url = {
   },
   server: {
     package:
-      "https://raw.githubusercontent.com/YoungDaggerDee/ToDoApp/master/package.json",
+      "https://raw.githubusercontent.com/YoungDaggerDee/TaskManager/master/package.json",
     version_log:
-      "https://raw.githubusercontent.com/YoungDaggerDee/ToDoApp/master/JSON/version_log.json",
+      "https://raw.githubusercontent.com/YoungDaggerDee/TaskManager/master/JSON/version_log.json",
   },
 };
 // LOAD BOTH VERSIONS
@@ -35,11 +35,10 @@ if (versions["local"] - versions["server"] != 0) {
   console.log("version up to date");
 }
 setTimeout(() => {
+  // IF VERSION IS UP TO DATE
   if (versions["new"].length == 0) {
-    $("#list").append(
-      '<h1 class="text-center mt-5"> Current version is up to date</h1>'
-    );
-    $("#openModal").css("display", "none");
+    alert("Current version is up to date!");
+    window.close();
   }
 
   for (let index = 0; index < versions["new"].length; index++) {
