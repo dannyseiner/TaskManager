@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Demo of saved taks",
+    "priority": 0,
+    "favorite": false,
+    "done": false
+  },
+  {
+    "text": "Demo of saved task with higher priority",
+    "priority": 1,
+    "favorite": false,
+    "done": false
+  },
+  {
+    "text": "Demo of saved task with priority and mark",
+    "priority": 2,
+    "favorite": false,
+    "done": true
+  }
+]
