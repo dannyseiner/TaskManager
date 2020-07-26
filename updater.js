@@ -4,9 +4,12 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-let version_url = "JSON/version_log.json";
-let config = fs.readFileSync("package.json");
-let log = fs.readFileSync(version_url);
+const url = { 
+    "version":"./JSON/version_log.json",
+    "package":"./package.json"
+}
+let config = fs.readFileSync(url['package']);
+let log = fs.readFileSync(url['version']);
 let log_json = JSON.parse(log);
 let json = JSON.parse(config);
 console.log("Old version ->" + json.version);
@@ -33,7 +36,7 @@ const new_version = version[0] + "." + version[1] + "." + version[2];
 json.version = new_version;
 
 console.log("New version -> " + new_version);
-fs.writeFileSync("package.json", JSON.stringify(json, null, 4));
+fs.writeFileSync(url['package'], JSON.stringify(json, null, 4));
 
 // USER INPUT
 let global_update;
@@ -56,7 +59,7 @@ rl.question("news:  ", function (text) {
   console.log(update["datetime"]);
   log_json.push(update);
   global_update = update;
-  fs.writeFileSync(version_url, JSON.stringify(log_json));
+  fs.writeFileSync(url['version'], JSON.stringify(log_json));
   rl.close();
 });
 

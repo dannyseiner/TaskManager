@@ -1,3 +1,9 @@
 {
-  "welcome_message": "Hello there!"
+    "System":{
+    },
+    "Sites":{
+        "per_web_settings":"IMPORTANT"
+    },
+    "readme":"url to translated readme (for example eu -> ./readme/eu.md)",
+    "Updates":"WILL NOT BE TRANSLATED"
 }
