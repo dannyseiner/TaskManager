@@ -63,8 +63,12 @@ rl.question("news:  ", function (text) {
   rl.close();
 });
 
+// PRINT STUFF 
 rl.on("close", function () {
-  console.log("New version -> " + new_version);
+  console.log()
+  console.log('------- VERSION STATUS -------')
   console.log(global_update);
+  console.log('------- VERSION STATUS -------')
+  console.log()
   process.exit(0);
 });

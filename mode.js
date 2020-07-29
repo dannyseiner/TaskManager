@@ -5,8 +5,13 @@ const fileName = "./package.json";
 const file = require(fileName);
 
 file.mode = file.mode == "development" ? "production" : "development";
-console.log(file.mode);
 fs.writeFile(fileName, JSON.stringify(file), (err) => {
   if (err) return console.log(err);
-  console.log("MODE UPDATED!");
-});
+  console.log()
+  console.log('------- MODE STATUS -------')
+  console.log()
+  console.log("    MODE -> "+file['mode']);
+  console.log()
+  console.log('------- MODE STATUS -------')
+  console.log()
+})

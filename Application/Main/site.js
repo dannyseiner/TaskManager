@@ -222,7 +222,7 @@ $.getJSON(url.version_log, (json) => {
     for (part of textSplit) {
       text += `<li> ${part} </li>`;
     }
-    $("#version_log").append(
+    $("#version_log").prepend(
       s.text == json[json.length - 1].text
         ? `<h3>${s.version}   <span class ="badge badge-secondary"> New </span></h3><p>${text}</p><p class='text-right text-secondary '>${s.datetime}</p>`
         : `<h3>${s.version}</h3><p>${text}</p><p class='text-right text-secondary '>${s.datetime}</p>`
