@@ -64,11 +64,11 @@ $.getJSON(url.package, (data) => {
 });
 // TASK CLASS
 class Task {
-  constructor(text, priority) {
+  constructor(text, priority, done) {
     this.text = text;
     this.priority = priority;
     this.favorite = false;
-    this.done = false;
+    this.done = done
   }
 }
 // MARK OR UNMARK: AS DONE
@@ -93,19 +93,31 @@ function Add() {
     alert("Invalid Task!");
     return;
   } else {
-    if (input.value.includes("#1")) {
+    if(input.value == '#clear'){
+        clearList()
+        input.value = ''
+        return
+    }
+    let tmpColor = input.value[0]+input.value[1] 
+    let isDone = input.value.includes('#d')
+    console.log(isDone)
+    if(isDone || isDone == '#d'){
+        input.value = input.value.replace('#d','')
+    }
+
+    if (tmpColor == '#1') {
       let tmp = input.value.replace("#1", "");
-      tasks.push(new Task(tmp.trim(), 0));
-    } else if (input.value.includes("#2")) {
+      tasks.push(new Task(tmp.trim(), 0, isDone));
+    } else if (tmpColor == '#2') {
       let tmp = input.value.replace("#2", "");
-      tasks.push(new Task(tmp.trim(), 1));
-    } else if (input.value.includes("#3")) {
+      tasks.push(new Task(tmp.trim(), 1,isDone ));
+    } else if (tmpColor == '#3') {
       let tmp = input.value.replace("#3", "");
-      tasks.push(new Task(tmp.trim(), 2));
+      tasks.push(new Task(tmp.trim(), 2, isDone));
     } else if (priority != 0) {
-      tasks.push(new Task(input.value, priority));
+      tasks.push(new Task(input.value, priority, isDone));
     } else {
-      tasks.push(new Task(input.value, 0));
+      tasks.push(new Task(input.value, 0, isDone));
     }
     fillList("none", "none");
     updateSize``;

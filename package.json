@@ -1,6 +1,6 @@
 {
     "name": "electron-quick-start",
-    "version": "1.7.1",
+    "version": "1.7.4",
     "description": "A minimal Electron application",
     "main": "main.js",
     "scripts": {
@@ -14,7 +14,7 @@
         "productName": "Task manager"
     },
     "log-message": "Wow you just open console, I would like to find someone so we can work together on this app. Send me email ( dannyseiner@gmail.com ) :P",
-    "mode": "production",
+    "mode": "development",
     "repository": "https://github.com/YoungDaggerDee/TaskManager",
     "keywords": [
         "Electron",

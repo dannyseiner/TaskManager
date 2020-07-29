@@ -1,0 +1,12 @@
+"commands":{
+    "priority":{
+        "usage":"{priority} tasks",
+        "options":[0,1,2,3],
+        "examples":["#0 clean room","#1buy new house","#3This is important!"]
+    },
+    "system-commands":{
+        "clear-list":{
+            "usage":"#clear"
+        }
+    }
+}
